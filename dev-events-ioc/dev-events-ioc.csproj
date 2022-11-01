@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>dev_events_ioc</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dev-events-domain\dev-events-domain.csproj" />
+    <ProjectReference Include="..\dev-events-repository\dev-events-repository.csproj" />
+    <ProjectReference Include="..\dev-events-service\dev-events-service.csproj" />
+  </ItemGroup>
+
+</Project>
