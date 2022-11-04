@@ -2,11 +2,11 @@
 
 namespace dev_events_service.ExternalServices.Cep.Service
 {
-    public class CepService : ICepService
+    public class CepExternalService : ICepExternalService
     {
         public async Task<CepModel> GetAddressAsync(string cep)
         {
-            var cepClient = RestService.For<ICepService>("http://viacep.com.br");
+            var cepClient = RestService.For<ICepExternalService>("http://viacep.com.br");
 
             var address = await cepClient.GetAddressAsync(cep);
 
