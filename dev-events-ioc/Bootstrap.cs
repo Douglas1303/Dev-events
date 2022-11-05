@@ -13,6 +13,7 @@ namespace dev_events_ioc
         public static IServiceCollection RegisterService(this IServiceCollection services)
         {
             //Service
+            services.AddScoped<IPatrocinadorService, PatrocinadorService>();
             services.AddScoped<ICepService, CepService>();
 
             //Repository
