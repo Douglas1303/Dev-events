@@ -2,7 +2,7 @@
 
 namespace Poc.Application.ViewModel
 {
-    public class AddUserViewModel
+    public class AddUsuarioViewModel
     {
         [Required(ErrorMessage = "Nome não pode ser vazio.")]
         public string NomeCompleto { get; set; }
