@@ -2,7 +2,7 @@
 
 namespace Poc.Application.ViewModel
 {
-    public class AddCategoriaViewModel
+    public class AddCategoriaVm
     {
         [Required]
         public string Descricao { get; set; }

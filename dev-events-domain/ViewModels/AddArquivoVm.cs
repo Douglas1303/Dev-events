@@ -2,7 +2,7 @@
 
 namespace Poc.Application.ViewModel
 {
-    public class AddArquivoViewModel
+    public class AddArquivoVm
     {
         public IFormFile Arquivo { get; set; }
         public int TipoArquivoId { get; set; }

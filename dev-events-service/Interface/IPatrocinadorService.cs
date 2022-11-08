@@ -6,7 +6,7 @@ namespace dev_events_service.Interface
     public interface IPatrocinadorService
     {
         Task<IResult> GetAllAsync();
-        Task<IResult> AddAsync(AddPatrocinadorViewModel viewModel);
+        Task<IResult> AddAsync(AddPatrocinadorVM viewModel);
         Task<IResult> RemoveAsync(int id);
     }
 }

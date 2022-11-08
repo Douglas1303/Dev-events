@@ -2,7 +2,7 @@
 
 namespace Poc.Application.ViewModel
 {
-    public class UpdateEventoViewModel
+    public class UpdateEventoVm
     {
         [Required(ErrorMessage = "Id não pode ser vazio.")]
         public int Id { get; set; }

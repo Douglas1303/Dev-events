@@ -2,7 +2,7 @@
 
 namespace Poc.Application.ViewModel
 {
-    public class CategoriaViewModel
+    public class CategoriaVm
     {
         public int Id { get; set; }
         public string Descricao { get; set; }

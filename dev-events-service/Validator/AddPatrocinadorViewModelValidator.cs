@@ -3,7 +3,7 @@ using Poc.Application.ViewModel;
 
 namespace dev_events_service.Validator
 {
-    public class AddPatrocinadorViewModelValidator : AbstractValidator<AddPatrocinadorViewModel>
+    public class AddPatrocinadorViewModelValidator : AbstractValidator<AddPatrocinadorVM>
     {
         public AddPatrocinadorViewModelValidator()
         {

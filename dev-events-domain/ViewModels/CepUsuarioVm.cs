@@ -2,9 +2,9 @@
 
 namespace Poc.Application.ViewModel
 {
-    public class CepUsuarioViewModel
+    public class CepUsuarioVm
     {
-        public CepUsuarioViewModel(string cep, string logradouro, string complemento, string bairro, string localidade, string uF, string dDD)
+        public CepUsuarioVm(string cep, string logradouro, string complemento, string bairro, string localidade, string uF, string dDD)
         {
             Cep = cep;
             Logradouro = logradouro;

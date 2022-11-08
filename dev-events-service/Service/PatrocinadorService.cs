@@ -6,7 +6,7 @@ namespace dev_events_service.Service;
 
 public class PatrocinadorService : IPatrocinadorService
 {
-    public Task<IResult> AddAsync(AddPatrocinadorViewModel viewModel)
+    public Task<IResult> AddAsync(AddPatrocinadorVM viewModel)
     {
         throw new NotImplementedException();
     }

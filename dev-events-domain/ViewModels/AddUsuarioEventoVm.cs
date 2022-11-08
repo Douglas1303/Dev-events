@@ -2,7 +2,7 @@
 
 namespace Poc.Application.ViewModel
 {
-    public class AddUsuarioEventoViewModel
+    public class AddUsuarioEventoVm
     {
         [Required]
         public int EventoId { get; set; }

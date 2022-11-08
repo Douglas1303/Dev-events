@@ -2,7 +2,7 @@
 
 namespace Poc.Application.ViewModel
 {
-    public class AddEventoViewModel
+    public class AddEventoVm
     {
         [Required(ErrorMessage = "Titulo precisa ser informado.")]
         public string Titulo { get; set; }

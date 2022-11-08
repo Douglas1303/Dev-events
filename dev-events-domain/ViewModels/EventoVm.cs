@@ -2,7 +2,7 @@
 
 namespace Poc.Application.ViewModel
 {
-    public class EventoViewModel
+    public class EventoVm
     {
         public int Id { get; set; }
         public DateTime DataCadastro { get; set; }
