@@ -20,7 +20,7 @@ public static class FluentValidationConfig
             .AddJsonOptions(p => p.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()))
             .AddFluentValidation(p =>
             {
-                p.RegisterValidatorsFromAssemblyContaining<AddPatrocinadorViewModelValidator>();
+                p.RegisterValidatorsFromAssemblyContaining<AddPatrocinadorVmValidator>();
                 p.ValidatorOptions.LanguageManager.Culture = new CultureInfo("pt-BR");
             });
     }

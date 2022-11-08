@@ -26,7 +26,7 @@ namespace dev_events_api.Controllers
         /// </summary>
         /// <param name="novoPatrocinador"></param>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] AddPatrocinadorVM viewModel)
+        public async Task<IActionResult> Post([FromBody] AddPatrocinadorVm viewModel)
         {
             return Ok(await _patrocinadorService.AddAsync(viewModel));
         }

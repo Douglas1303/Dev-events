@@ -17,14 +17,7 @@ namespace dev_events_api.Controllers
         [HttpGet("{cep}")]
         public async Task<IActionResult> GetByCepAsync(string cep)
         {
-            try
-            {
-                return Ok(await _cepService.GetCepAsync(cep));
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+           return Ok(await _cepService.GetCepAsync(cep));
         }
     }
 }

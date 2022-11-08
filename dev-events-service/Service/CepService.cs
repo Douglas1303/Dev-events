@@ -18,19 +18,12 @@ namespace dev_events_service.Service
 
         public async Task<object> GetCepAsync(string cep)
         {
-            try
-            {
-                var address = _mapper.Map<CepViewModel>(await _cepExternalService.GetAddressAsync(cep));
+          var address = _mapper.Map<CepViewModel>(await _cepExternalService.GetAddressAsync(cep));
 
-                if (!address.Cep.Any()) return "Endereço não encontrado";
+          if (!address.Cep.Any()) 
+                return "Endereço não encontrado";
 
-                return address;
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
+          return address;
         }
     }
 }
