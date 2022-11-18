@@ -1,16 +1,16 @@
-﻿using Poc.Domain.Dtos;
+﻿using dev_events_domain.Models;
 
 namespace dev_events_domain.Interfaces;
 
 public interface IPatrocinadorRepository
 {
-    Task<IEnumerable<PatrocinadorDto>> GetAll();
+    Task<IEnumerable<PatrocinadorModel>> GetAll();
 
-    Task<int> AddAsync(PatrocinadorDto dto);
+    Task<int> AddAsync(PatrocinadorModel dto);
 
     Task<string> RemoveAsync(int id);
 
-    Task<PatrocinadorDto> SponsorExists(int id);
+    Task<PatrocinadorModel> SponsorExists(int id);
 
     bool NameSponsorExists(string name);
 }

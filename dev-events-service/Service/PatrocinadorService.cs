@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using dev_events_domain.Interfaces;
+using dev_events_domain.Models;
 using dev_events_service.Core;
 using dev_events_service.Interface;
 using Poc.Application.ViewModel;
@@ -20,14 +21,17 @@ public class PatrocinadorService : IPatrocinadorService
 
     public async Task<IResult> AddAsync(AddPatrocinadorVm viewModel)
     {
-        var patrocinador = _mapper.Map<PatrocinadorDto>(viewModel);
+        var patrocinador = _mapper.Map<PatrocinadorModel>(viewModel);
 
         return new QueryResult(await _patrocinadorRepository.AddAsync(patrocinador));
     }
 
     public async Task<IResult> GetAllAsync()
     {
-        return new QueryResult(await _patrocinadorRepository.GetAll());
+        var resultado = await _patrocinadorRepository.GetAll();
+        var patrocinadores = _mapper.Map<List<PatrocinadorDto>>(resultado);
+
+        return new QueryResult(patrocinadores);
     }
 
     public async Task<IResult> RemoveAsync(int id)

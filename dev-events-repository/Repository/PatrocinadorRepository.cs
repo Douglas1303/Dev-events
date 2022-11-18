@@ -1,16 +1,16 @@
 ﻿using dev_events_domain.Interfaces;
-using Poc.Domain.Dtos;
+using dev_events_domain.Models;
 
 namespace dev_events_repository.Repository
 {
     public class PatrocinadorRepository : IPatrocinadorRepository
     {
-        public Task<int> AddAsync(PatrocinadorDto dto)
+        public Task<int> AddAsync(PatrocinadorModel dto)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<PatrocinadorDto>> GetAll()
+        public Task<IEnumerable<PatrocinadorModel>> GetAll()
         {
             throw new NotImplementedException();
         }
@@ -25,7 +25,7 @@ namespace dev_events_repository.Repository
             throw new NotImplementedException();
         }
 
-        public Task<PatrocinadorDto> SponsorExists(int id)
+        public Task<PatrocinadorModel> SponsorExists(int id)
         {
             throw new NotImplementedException();
         }
