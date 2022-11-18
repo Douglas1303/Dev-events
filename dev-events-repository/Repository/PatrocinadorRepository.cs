@@ -1,4 +1,4 @@
-﻿using dev_events_repository.Interface;
+﻿using dev_events_domain.Interfaces;
 using Poc.Domain.Dtos;
 
 namespace dev_events_repository.Repository
