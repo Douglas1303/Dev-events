@@ -6,11 +6,11 @@ public interface IPatrocinadorRepository
 {
     Task<IEnumerable<PatrocinadorModel>> GetAll();
 
-    Task<int> AddAsync(PatrocinadorModel dto);
+    Task<int> AddAsync(PatrocinadorModel patrocinador);
 
     Task<string> RemoveAsync(int id);
 
     Task<PatrocinadorModel> SponsorExists(int id);
 
-    bool NameSponsorExists(string name);
+    bool NameSponsorExists(string nome);
 }

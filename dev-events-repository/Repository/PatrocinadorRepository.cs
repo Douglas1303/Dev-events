@@ -3,19 +3,20 @@ using dev_events_domain.Models;
 
 namespace dev_events_repository.Repository
 {
-    public class PatrocinadorRepository : IPatrocinadorRepository
+    public class PatrocinadorRepository :  IPatrocinadorRepository
     {
-        public Task<int> AddAsync(PatrocinadorModel dto)
+
+        public Task<int> AddAsync(PatrocinadorModel patrocinador)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<PatrocinadorModel>> GetAll()
+        public async Task<IEnumerable<PatrocinadorModel>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public bool NameSponsorExists(string name)
+        public bool NameSponsorExists(string nome)
         {
             throw new NotImplementedException();
         }

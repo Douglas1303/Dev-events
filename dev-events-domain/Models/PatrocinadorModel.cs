@@ -44,8 +44,6 @@ public sealed class PatrocinadorModel : BaseModel
         DDD = ddd;
     }
 
-
-
     public string ChangeComplement(string complemento)
     {
         Complemento = complemento;
