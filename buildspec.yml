@@ -1,29 +1,11 @@
-# AWS CodeBuild spec to build an Elastic Beanstalk artifact for AWS CodePipeline to deploy
-
 version: 0.2
 
-env:
-    variables:
-        PROJECT: dev-events-api
-
-phases:   
-    pre_build:
-        commands:
-            - echo Restore started on `date`
-            - dotnet restore
-      
-    build:
-        commands:
-            - echo Build started on `date`
-            - dotnet build -c Release
-            - dotnet test -c Release --logger trx --results-directory ./testresults
-      
-    post_build:
-        commands:
-            - echo Publish started on `date`
-            - dotnet publish --configuration Release --runtime win-x64 -p:PublishReadyToRun=true -p:PublishTrimmed=true --self-contained
-artifacts:
-    files:
-        - '**/*'
-    base-directory: ./build_output
-    discard-paths: no
+phases:
+  pre_build:
+    commands:
+     - New-Item -ItemType Junction -Path C:\Src -Value $Env:CODEBUILD_SRC_DIR
+     - cd C:\Src  
+     - nuget.exe restore
+  build:
+    commands:
+     - msbuild 
