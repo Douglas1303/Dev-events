@@ -21,8 +21,7 @@ phases:
     post_build:
         commands:
             - echo Publish started on `date`
-            dotnet publish --configuration Release --runtime win-x64 -p:PublishReadyToRun=true -p:PublishTrimmed=true --self-contained
-
+            - dotnet publish --configuration Release --runtime win-x64 -p:PublishReadyToRun=true -p:PublishTrimmed=true --self-contained
 artifacts:
     files:
         - '**/*'
