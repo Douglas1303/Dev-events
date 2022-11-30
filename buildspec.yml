@@ -7,10 +7,9 @@ env:
         PROJECT: dev-events-api
 
 phases:   
-    pre_build:
-        commands:
-            - echo Restore started on `date`
-            - dotnet restore
+  install:
+    commands:
+      - /usr/local/bin/dotnet-install.sh --channel LTS
       
     build:
         commands:
