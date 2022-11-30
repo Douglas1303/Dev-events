@@ -21,7 +21,7 @@ phases:
     post_build:
         commands:
             - echo Publish started on `date`
-            - dotnet publish -c Release  -r windows-x64 -o ./build_output ./${PROJECT}/${PROJECT}.Api.csproj --self-contained false
+            - dotnet publish -c Release  -r win-x64 -o ./build_output ./${PROJECT}/${PROJECT}.Api.csproj --self-contained false
 
 artifacts:
     files:
