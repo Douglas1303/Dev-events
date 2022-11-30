@@ -1,26 +1,28 @@
+version: 0.2
 
-phases:
-  install:
-    runtime-versions:
-      dotnet: 6.0
+env:
+    variables:
+        PROJECT: dev-events-api
 
-  pre_build:
-    commands:
-      - echo pre-build started on `date`
-      - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+phases:   
+    pre_build:
+        commands:
+            - echo Restore started on `date`
+            - dotnet restore
       
-  build:
-    commands:
-      - echo Building dotnet API...
-      - cd aspnet-core/src/SITR.Web.Host
-      - echo Executing dotnet restore...
-      - dotnet restore
-      - echo Executing dotnet publish...
-      - dotnet publish -c release -o ../../../docker/build/outputs/Host
-  
-  post_build:
-    commands:
-      - echo Pushing the Docker image...
-      - docker-compose --file=docker-compose-qa.yml push
-      - echo Build completed on `date`
+    build:
+        commands:
+            - echo Build started on `date`
+            - dotnet build -c Release
+            - dotnet test -c Release --logger trx --results-directory ./testresults
+      
+    post_build:
+        commands:
+            - echo Publish started on `date`
+            - dotnet publish -c Release  -r linux-x64 -o ./build_output ./${PROJECT}/${PROJECT}.Api.csproj --self-contained false
+
+artifacts:
+    files:
+        - '**/*'
+    base-directory: ./build_output
+    discard-paths: no
