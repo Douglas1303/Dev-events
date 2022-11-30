@@ -4,7 +4,7 @@ version: 0.2
 
 env:
     variables:
-        PROJECT: Dev-Events
+        PROJECT: dev-events-api
 
 phases:   
     pre_build:
