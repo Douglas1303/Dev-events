@@ -1,0 +1,19 @@
+﻿-- Tabela Patrocinador
+
+CREATE TABLE IF NOT EXISTS public."Patrocinador"
+(
+    "NomePatrocinador" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "Documento" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "Telefone" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "Cep" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "Logradouro" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "Complemento" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "Bairro" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "Localidade" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "UF" character varying(5) COLLATE pg_catalog."default" NOT NULL,
+    "DDD" integer NOT NULL,
+    "DataCadastro" date NOT NULL,
+    "DataAtualizacao" date,
+    "Id" integer NOT NULL,
+    CONSTRAINT "Patrocinador_pkey" PRIMARY KEY ("Id")
+)

@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\dev-events-domain\dev-events-domain.csproj" />
     <ProjectReference Include="..\dev-events-repository\dev-events-repository.csproj" />
     <ProjectReference Include="..\dev-events-service\dev-events-service.csproj" />

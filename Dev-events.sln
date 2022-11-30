@@ -15,17 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - IOC", "4 - IOC", "{6000
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Tests", "6 - Tests", "{B1500398-C5E4-472A-ADA7-058D6412BB63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-tests", "dev-events-tests\dev-events-tests.csproj", "{304309DF-7F82-4865-BF85-844BB9C5574A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-repository", "dev-events-repository\dev-events-repository.csproj", "{04BCDD47-FA61-4E24-8066-F9BC34A45EE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-repository", "dev-events-repository\dev-events-repository.csproj", "{04BCDD47-FA61-4E24-8066-F9BC34A45EE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-ioc", "dev-events-ioc\dev-events-ioc.csproj", "{7DF41DAC-279E-47C0-9559-EA7181F54E46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-ioc", "dev-events-ioc\dev-events-ioc.csproj", "{7DF41DAC-279E-47C0-9559-EA7181F54E46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-domain", "dev-events-domain\dev-events-domain.csproj", "{6CD90DD4-DBC2-4F13-B30E-409DD4F28EC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-domain", "dev-events-domain\dev-events-domain.csproj", "{6CD90DD4-DBC2-4F13-B30E-409DD4F28EC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-service", "dev-events-service\dev-events-service.csproj", "{AD13AE1A-D451-4587-AE5F-FC9879B797AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-service", "dev-events-service\dev-events-service.csproj", "{AD13AE1A-D451-4587-AE5F-FC9879B797AE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-api", "dev-events-api\dev-events-api.csproj", "{7B3295B9-6BEF-4DD3-BC4F-75DA78D4F6BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-api", "dev-events-api\dev-events-api.csproj", "{7B3295B9-6BEF-4DD3-BC4F-75DA78D4F6BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{304309DF-7F82-4865-BF85-844BB9C5574A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{304309DF-7F82-4865-BF85-844BB9C5574A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{304309DF-7F82-4865-BF85-844BB9C5574A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{304309DF-7F82-4865-BF85-844BB9C5574A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{04BCDD47-FA61-4E24-8066-F9BC34A45EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04BCDD47-FA61-4E24-8066-F9BC34A45EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04BCDD47-FA61-4E24-8066-F9BC34A45EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,7 +56,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{304309DF-7F82-4865-BF85-844BB9C5574A} = {B1500398-C5E4-472A-ADA7-058D6412BB63}
 		{04BCDD47-FA61-4E24-8066-F9BC34A45EE1} = {526FFF2E-DC91-4F5A-9019-3E29A8B05879}
 		{7DF41DAC-279E-47C0-9559-EA7181F54E46} = {60000603-805D-42DD-BB44-D5670F114BD9}
 		{6CD90DD4-DBC2-4F13-B30E-409DD4F28EC7} = {144D0BD3-AE68-439D-BDCE-5EB40B0D1A5B}
