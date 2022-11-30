@@ -4,8 +4,7 @@ phases:
   pre_build:
     commands:
      - New-Item -ItemType Junction -Path C:\Src -Value $Env:CODEBUILD_SRC_DIR
-     - cd C:\Src  
-     - nuget.exe restore
+     - cd C:\Src
   build:
     commands:
      - msbuild 
