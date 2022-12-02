@@ -1,6 +1,6 @@
 ﻿namespace Poc.Domain.Enum
 {
-    public enum EStates
+    public enum Eestados
     {
         AC,
         AL,
