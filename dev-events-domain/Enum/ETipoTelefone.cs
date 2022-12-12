@@ -1,6 +1,6 @@
 ﻿namespace Poc.Domain.Enum
 {
-    public enum EPhoneType
+    public enum ETipoTelefone
     {
         Comercial = 1,
         Residencial = 2,

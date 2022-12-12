@@ -1,34 +1,45 @@
-﻿using dev_events_domain.Interfaces;
+﻿using Dapper;
+using dev_events_domain.Interfaces;
 using dev_events_domain.Models;
+using dev_events_repository.Repository.Base;
+using dev_events_repository.Repository.UnitOfWork;
+using System.Data;
 
 namespace dev_events_repository.Repository
 {
-    public class PatrocinadorRepository :  IPatrocinadorRepository
+    public class PatrocinadorRepository : BaseRepository, IPatrocinadorRepository
     {
-
-        public Task<int> AddAsync(PatrocinadorModel patrocinador)
+        public PatrocinadorRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
-            throw new NotImplementedException();
+
+        }
+
+        public async Task<int> AddAsync(PatrocinadorModel patrocinador)
+        {
+            return (int)await _unitOfWork.Connection.ExecuteScalarAsync($"pRocedure", patrocinador, commandType: CommandType.StoredProcedure);
         }
 
         public async Task<IEnumerable<PatrocinadorModel>> GetAll()
         {
-            throw new NotImplementedException();
+            return (await _unitOfWork.Connection.QueryAsync<PatrocinadorModel>($"PRocedure", commandType: CommandType.StoredProcedure)).ToList();
         }
 
         public bool NameSponsorExists(string nome)
         {
-            throw new NotImplementedException();
+            var resultado = (int)_unitOfWork.Connection.ExecuteScalar($"procedure", new { nome }, commandType: CommandType.StoredProcedure);
+
+
+            return resultado > 0;
         }
 
-        public Task<string> RemoveAsync(int id)
+        public async Task<int> RemoveAsync(int id)
         {
-            throw new NotImplementedException();
+            return (int)await _unitOfWork.Connection.ExecuteScalarAsync($"Procedure", new { id }, commandType: CommandType.StoredProcedure);
         }
 
-        public Task<PatrocinadorModel> SponsorExists(int id)
+        public async Task<PatrocinadorModel> SponsorExists(int id)
         {
-            throw new NotImplementedException();
+            return await _unitOfWork.Connection.ExecuteScalarAsync<PatrocinadorModel>($"procedure", new { id }, commandType: CommandType.StoredProcedure);
         }
     }
 }

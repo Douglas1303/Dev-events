@@ -1,13 +1,13 @@
-﻿using System.Data;
+﻿using dev_events_repository.Repository.UnitOfWork;
 
 namespace dev_events_repository.Repository.Base;
 
 public abstract class BaseRepository
 {
-    protected IDbConnection _dbConnection;
+    protected readonly IUnitOfWork _unitOfWork;
 
-    protected BaseRepository(IDbConnection dbConnection)
+    public BaseRepository(IUnitOfWork unitOfWork)
     {
-        _dbConnection = dbConnection;
+        _unitOfWork = unitOfWork;
     }
 }

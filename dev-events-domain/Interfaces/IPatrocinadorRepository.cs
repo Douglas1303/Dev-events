@@ -8,7 +8,7 @@ public interface IPatrocinadorRepository
 
     Task<int> AddAsync(PatrocinadorModel patrocinador);
 
-    Task<string> RemoveAsync(int id);
+    Task<int> RemoveAsync(int id);
 
     Task<PatrocinadorModel> SponsorExists(int id);
 

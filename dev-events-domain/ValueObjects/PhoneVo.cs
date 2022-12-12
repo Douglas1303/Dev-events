@@ -5,10 +5,10 @@ namespace Poc.Domain.ValueObjects
 {
     public class PhoneVo : ValueObject
     {
-        public EPhoneType PhoneType { get; private set; }
+        public ETipoTelefone PhoneType { get; private set; }
         public string Number { get; private set; }
 
-        public PhoneVo(EPhoneType phoneType, string number)
+        public PhoneVo(ETipoTelefone phoneType, string number)
         {
             PhoneType = phoneType;
             Number = number;
@@ -33,16 +33,16 @@ namespace Poc.Domain.ValueObjects
         {
             switch (PhoneType)
             {
-                case EPhoneType.Comercial:
+                case ETipoTelefone.Comercial:
                     return IsValidPhone();
 
-                case EPhoneType.Residencial:
+                case ETipoTelefone.Residencial:
                     return IsValidPhone();
 
-                case EPhoneType.Celular:
+                case ETipoTelefone.Celular:
                     return IsValidCelular();
 
-                case EPhoneType.WhatsApp:
+                case ETipoTelefone.WhatsApp:
                     return IsValidWhatsApp();
 
                 default:
