@@ -7,7 +7,7 @@ namespace dev_events_tests.ObjectsFaker.Dtos;
 
 public static class PatrocinadorDtoFakers
 {
-    public static List<PatrocinadorDto> ListaPatrocinadorDtoFaker(int quant)
+    public static List<PatrocinadorDto> GerarListaPatrocinadorDtoFaker(int quant)
     {
         return new Faker<PatrocinadorDto>("pt_BR")
             .RuleFor(x => x.NomePatrocinador, f => f.Person.FullName)

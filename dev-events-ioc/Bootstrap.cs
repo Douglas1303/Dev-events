@@ -1,5 +1,6 @@
 ﻿using dev_events_domain.Interfaces;
 using dev_events_repository.Repository;
+using dev_events_repository.Repository.UnitOfWork;
 using dev_events_service.ExternalServices.Cep.Service;
 using dev_events_service.Interface;
 using dev_events_service.Mapping;
@@ -28,6 +29,8 @@ namespace dev_events_ioc
             services.AddTransient<IDbConnection>((sp) => new NpgsqlConnection("connectionString"));
 
             services.AddAutoMapper(typeof(MappingProfile));
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;
         }
