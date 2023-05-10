@@ -3,7 +3,7 @@ using System.Transactions;
 
 namespace dev_events_repository.Repository.UnitOfWork
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork: IDisposable
     {
         DbConnection Connection { get; }
         TransactionScope Transaction { get; }

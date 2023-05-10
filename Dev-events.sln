@@ -15,17 +15,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - IOC", "4 - IOC", "{6000
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Tests", "6 - Tests", "{B1500398-C5E4-472A-ADA7-058D6412BB63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-tests", "dev-events-tests\dev-events-tests.csproj", "{304309DF-7F82-4865-BF85-844BB9C5574A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-tests", "dev-events-tests\dev-events-tests.csproj", "{304309DF-7F82-4865-BF85-844BB9C5574A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{04BCDD47-FA61-4E24-8066-F9BC34A45EE1} = {04BCDD47-FA61-4E24-8066-F9BC34A45EE1}
+		{6CD90DD4-DBC2-4F13-B30E-409DD4F28EC7} = {6CD90DD4-DBC2-4F13-B30E-409DD4F28EC7}
+		{7DF41DAC-279E-47C0-9559-EA7181F54E46} = {7DF41DAC-279E-47C0-9559-EA7181F54E46}
+		{AD13AE1A-D451-4587-AE5F-FC9879B797AE} = {AD13AE1A-D451-4587-AE5F-FC9879B797AE}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-repository", "dev-events-repository\dev-events-repository.csproj", "{04BCDD47-FA61-4E24-8066-F9BC34A45EE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-repository", "dev-events-repository\dev-events-repository.csproj", "{04BCDD47-FA61-4E24-8066-F9BC34A45EE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-ioc", "dev-events-ioc\dev-events-ioc.csproj", "{7DF41DAC-279E-47C0-9559-EA7181F54E46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-ioc", "dev-events-ioc\dev-events-ioc.csproj", "{7DF41DAC-279E-47C0-9559-EA7181F54E46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-domain", "dev-events-domain\dev-events-domain.csproj", "{6CD90DD4-DBC2-4F13-B30E-409DD4F28EC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-domain", "dev-events-domain\dev-events-domain.csproj", "{6CD90DD4-DBC2-4F13-B30E-409DD4F28EC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-service", "dev-events-service\dev-events-service.csproj", "{AD13AE1A-D451-4587-AE5F-FC9879B797AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-service", "dev-events-service\dev-events-service.csproj", "{AD13AE1A-D451-4587-AE5F-FC9879B797AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-events-api", "dev-events-api\dev-events-api.csproj", "{7B3295B9-6BEF-4DD3-BC4F-75DA78D4F6BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dev-events-api", "dev-events-api\dev-events-api.csproj", "{7B3295B9-6BEF-4DD3-BC4F-75DA78D4F6BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3869E608-097B-4F62-8415-CE9C22B68E44}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

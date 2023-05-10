@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using dev_events_domain.Interfaces;
 using dev_events_domain.Models;
-using dev_events_service.Core;
 using dev_events_service.Interface;
 using Poc.Application.ViewModel;
 using Poc.Domain.Dtos;
+using Microsoft.AspNetCore.Http;
+using dev_events_service.Core;
 
 namespace dev_events_service.Service;
 
